@@ -25,11 +25,11 @@ export const SwitchTheme = ({ className }: { className?: string }) => {
   if (!mounted) return null;
 
   return (
-    <div className={`flex space-x-2 h-8 items-center justify-center text-sm ${className}`}>
+    <div className={`flex space-x-2 h-8 items-center justify-center text-sm mt-10 ${className}`}>
       <input
         id="theme-toggle"
         type="checkbox"
-        className="toggle toggle-secondary bg-secondary hover:bg-secondary border-secondary"
+        className="toggle toggle-primary bg-rose-400 hover:bg-rose-500 border-rose-400"
         onChange={handleToggle}
         checked={isDarkMode}
       />

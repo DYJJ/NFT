@@ -27,7 +27,11 @@ const config: HardhatUserConfig = {
           optimizer: {
             enabled: true,
             // https://docs.soliditylang.org/en/latest/using-the-compiler.html#optimizer-options
-            runs: 200,
+            runs: 1000,
+          },
+          viaIR: true,
+          metadata: {
+            bytecodeHash: "none",
           },
         },
       },
@@ -134,6 +138,14 @@ const config: HardhatUserConfig = {
   },
   sourcify: {
     enabled: false,
+  },
+  gasReporter: {
+    enabled: true,
+    currency: "USD",
+    gasPrice: 100,
+  },
+  mocha: {
+    timeout: 100000,
   },
 };
 

@@ -11,5 +11,28 @@ const fetchFromApi = ({ path, method, body }: { path: string; method: string; bo
 
 export const addToIPFS = (yourJSON: object) => fetchFromApi({ path: "/api/ipfs/add", method: "Post", body: yourJSON });
 
-export const getMetadataFromIPFS = (ipfsHash: string) =>
-  fetchFromApi({ path: "/api/ipfs/get-metadata", method: "Post", body: { ipfsHash } });
+//export const getMetadataFromIPFS = (ipfsHash: string) =>
+//  fetchFromApi({ path: "/api/ipfs/get-metadata", method: "Post", body: { ipfsHash } });
+
+//从 IPFS 获取元数据的异步函数
+export const getMetadataFromIPFS = async (tokenURI: string) => {
+  try{
+    const response = await fetch(tokenURI);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const data = await response.json();
+    return data;
+  } catch(error) {
+    console.error("Error fetching data from pinata:", error);
+    throw error;
+  }
+};
+
+
+
+
+
+
+
+

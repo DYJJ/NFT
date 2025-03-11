@@ -47,20 +47,16 @@ export const AddressInfoDropdown = ({
 
   return (
     <>
-      <details ref={dropdownRef} className="dropdown dropdown-end leading-3">
+      <details ref={dropdownRef} className="dropdown fixed bottom-4 right-[calc(1rem+80px)] z-50 leading-3">
         <summary
           tabIndex={0}
-          className="btn btn-secondary dark:hover:bg-black/20 btn-sm pl-0 pr-2 shadow-md dropdown-toggle gap-0 !h-auto"
+          className="btn btn-circle btn-secondary btn-sm shadow-md dropdown-toggle !h-auto hover:bg-opacity-80 transition-all duration-200 p-2"
         >
-          <BlockieAvatar address={checkSumAddress} size={30} ensImage={ensAvatar} />
-          <span className="ml-2 mr-1">
-            {isENS(displayName) ? displayName : checkSumAddress?.slice(0, 6) + "..." + checkSumAddress?.slice(-4)}
-          </span>
-          <ChevronDownIcon className="h-6 w-4 ml-2 sm:ml-0" />
+          <BlockieAvatar address={checkSumAddress} size={24} ensImage={ensAvatar} />
         </summary>
         <ul
           tabIndex={0}
-          className="dropdown-content menu z-[2] p-2 mt-2 shadow-center shadow-accent bg-base-200 rounded-box gap-1"
+          className="dropdown-content menu fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[2] p-4 shadow-lg bg-base-200 bg-opacity-90 backdrop-blur-sm rounded-box gap-2 min-w-[300px]"
         >
           <NetworkOptions hidden={!selectingNetwork} />
           <li className={selectingNetwork ? "hidden" : ""}>
@@ -107,7 +103,7 @@ export const AddressInfoDropdown = ({
                 rel="noopener noreferrer"
                 className="whitespace-nowrap"
               >
-                View on Block Explorer
+                查看区块链浏览器
               </a>
             </button>
           </li>

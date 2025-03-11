@@ -1,0 +1,10 @@
+在challenge-0-simple-nft目录下打开终端
+启动项目三个命令：
+yarn chain：启动本地区块链。
+yarn deploy （--network localhost/sepolia）：部署智能合约到本地链或者测试网
+yarn start：启动前端应用
+
+安装依赖，要用yarn安装，且要到package的nextjs文件夹下安装
+
+
+mac格式化代码：Shift + Option + F

@@ -23,16 +23,21 @@ type HeaderMenuLink = {
 
 export const menuLinks: HeaderMenuLink[] = [
   {
-    label: "My NFTs",
+    label: "我的NFT",
     href: "/myNFTs",
     icon: <PhotoIcon className="h-4 w-4" />,
   },
   {
-    label: "Transfers",
-    href: "/transfers",
-    icon: <ArrowPathIcon className="h-4 w-4" />,
+    label: "空投",
+    href: "/airDrop",
+    icon: <PhotoIcon className="h-4 w-4" />,
   },
   {
+    label: "历史交易记录",
+    href: "/transactionHistory",
+    icon: <ArrowPathIcon className="h-4 w-4" />,
+  },
+/*   {
     label: "IPFS Upload",
     href: "/ipfsUpload",
     icon: <ArrowUpTrayIcon className="h-4 w-4" />,
@@ -41,11 +46,46 @@ export const menuLinks: HeaderMenuLink[] = [
     label: "IPFS Download",
     href: "/ipfsDownload",
     icon: <ArrowDownTrayIcon className="h-4 w-4" />,
-  },
+  }, */
   {
-    label: "Debug Contracts",
+    label: "Debug",
     href: "/debug",
     icon: <BugAntIcon className="h-4 w-4" />,
+  },
+  {
+    label: "铸造NFT",
+    href: "/create",
+    icon: <PhotoIcon className="h-4 w-4" />,
+  },
+  {
+    label: "NTF市场",
+    href: "/nftMarket",
+    icon: <PhotoIcon className="h-4 w-4" />,
+  },
+  {
+    label: "盲盒市场",
+    href: "/blindBox",
+    icon: <PhotoIcon className="h-4 w-4" />,
+  },
+  {
+    label: "拍卖",
+    href: "/auction",
+    icon: <PhotoIcon className="h-4 w-4" />,
+  },
+  {
+    label: "我的碎片",
+    href: "/myFragment",
+    icon: <PhotoIcon className="h-4 w-4" />,
+  },
+  {
+    label: "我的收藏",
+    href: "/favorite",
+    icon: <PhotoIcon className="h-4 w-4" />,
+  },
+  {
+    label: "我的收益",
+    href: "/myEarning",
+    icon: <PhotoIcon className="h-4 w-4" />,
   },
 ];
 
@@ -87,7 +127,7 @@ export const Header = () => {
   );
 
   return (
-    <div className="sticky xl:static top-0 navbar bg-primary min-h-0 flex-shrink-0 justify-between z-20 shadow-md shadow-secondary px-0 sm:px-2">
+    <div className="sticky xl:static top-0 navbar min-h-0 flex-shrink-0 justify-between z-20 px-0 sm:px-2">
       <div className="navbar-start w-auto xl:w-1/2">
         <div className="xl:hidden dropdown" ref={burgerMenuRef}>
           <label
@@ -113,11 +153,7 @@ export const Header = () => {
         </div>
         <Link href="/" passHref className="hidden xl:flex items-center gap-1 ml-4 mr-6 shrink-0">
           <div className="flex relative w-10 h-10">
-            <Image alt="SE2 logo" className="cursor-pointer" fill src="/logo.svg" />
-          </div>
-          <div className="flex flex-col">
-            <span className="font-bold leading-tight">SRE Challenges</span>
-            <span className="text-xs">#0: Simple NFT</span>
+            <Image alt="SE2 logo" className="cursor-pointer" fill src="/nonono.gif" />
           </div>
         </Link>
         <ul className="hidden xl:flex xl:flex-nowrap menu menu-horizontal px-1 gap-2">

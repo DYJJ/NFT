@@ -67,7 +67,7 @@ export const FaucetButton = () => {
         disabled={loading}
       >
         {!loading ? (
-          <BanknotesIcon className="h-4 w-4" />
+          <BanknotesIcon className="h-6 w-6 text-lime-400" />
         ) : (
           <span className="loading loading-spinner loading-xs"></span>
         )}
